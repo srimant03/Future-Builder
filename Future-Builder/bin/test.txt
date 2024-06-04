@@ -1,0 +1,48 @@
+Scanner sc = new Scanner(System.in);
+        int choice1 = sc.nextInt();
+        if (choice1 == 1) {
+            x.enter();
+            int choice2 = sc.nextInt();
+            if (choice2 == 1) {
+                x.enter_student();
+            } else if (choice2 == 2) {
+                x.enter_company();
+            } else if (choice2 == 3) {
+                x.enter_placement();
+                int choice3 = sc.nextInt();
+                if (choice3 == 1) {
+                    p.open_student_registration();
+                    String start= sc.next();
+                    System.out.println(start);
+                    String end = sc.next();
+                    System.out.println(end);
+                } else if (choice3 == 2) {
+                    p.open_company_registration();
+                    String start= sc.next();
+                    System.out.println(start);
+                    String end = sc.next();
+                    System.out.println(end);
+                } else if (choice3 == 3) {
+                    int n=p.get_registered_students();
+                    System.out.println(n);
+                } else if (choice3 == 4) {
+                    int n=p.get_registered_companies();
+                    System.out.println(n);
+                } else if (choice3 == 5) {
+                    p.get_average_package();
+                } else if (choice3 == 6) {
+                    p.get_company_result();
+                } else if (choice3 == 7) {
+                    p.get_company_details();
+                } else if (choice3 == 8) {
+                    p.get_student_details();
+                } else if (choice3 == 9) {
+                    x.enter();
+                }
+
+            } else if (choice2 == 4) {
+                x.start();
+            }
+        } else {
+            System.out.println("Thank you for using future builder");
+        }
